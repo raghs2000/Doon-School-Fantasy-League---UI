@@ -1,0 +1,80 @@
+html
+  head
+    title Doon Fantasy League
+    link(rel='stylesheet', type='text/css', href='stylesheet.css')
+    link(rel='icon', type='image/png', href='logo.png')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js')
+  body
+    .titleHead
+      h1 MAKE YOUR TEAM
+    .headTeam
+      p#price YOUR BUDGET
+      h1#displayPrice 50.0
+    #court
+      img.imgA1(src='court.png')
+      #subs
+        img#imageToSwapS1.imgB1(src='blank.png')
+        select(onchange="$('#imageToSwapS1').attr('src', this.options[this.selectedIndex].value);")
+          option(value='', selected='') Select Substitute 1
+          option(value='Jersey/h.png') Lakshman
+          option(value='Jersey/k.png') Dev
+          option(value='Jersey/o.png') Paarth
+          option(value='Jersey/t.png') Saraf
+        img#imageToSwapS2.imgB1(src='blank.png')
+        select(onchange="$('#imageToSwapS2').attr('src', this.options[this.selectedIndex].value);")
+          option(value='', selected='') Select Substitute 2
+          option(value='Jersey/h.png') Lakshman
+          option(value='Jersey/k.png') Dev
+          option(value='Jersey/o.png') Paarth
+          option(value='Jersey/t.png') Saraf
+        img#imageToSwapS3.imgB1(src='blank.png')
+        select(onchange="$('#imageToSwapS3').attr('src', this.options[this.selectedIndex].value);")
+          option(value='', selected='') Select Substitute 3
+          option(value='Jersey/h.png') Lakshman
+          option(value='Jersey/k.png') Dev
+          option(value='Jersey/o.png') Paarth
+          option(value='Jersey/t.png') Saraf
+      #gates
+        img#imageToSwapTL.imgB1(src='blank.png')
+        select(onchange="$('#imageToSwapTL').attr('src', this.options[this.selectedIndex].value);")
+          option(value='', selected='') Select Left Gate
+          option(value='Jersey/k.png') Naman
+          option(value='Jersey/o.png') Raghav
+          option(value='Jersey/h.png') Tarush
+        img#imageToSwapTR.imgB1(src='blank.png')
+        select(onchange="$('#imageToSwapTR').attr('src', this.options[this.selectedIndex].value);")
+          option(value='', selected='') Select Right Gate
+          option(value='Jersey/k.png') Hamza
+          option(value='Jersey/j.png') Aayush
+          option(value='Jersey/o.png') Devansh
+      #heights
+        img#imageToSwapBL.imgB1(src='blank.png')
+        select(onchange="$('#imageToSwapBL').attr('src', this.options[this.selectedIndex].value);")
+          option(value='', selected='') Select Left Height
+          option(value='Jersey/h.png') Sparsh
+          option(value='Jersey/h.png') Bonda
+          option(value='Jersey/k.png') Kushagra
+        img#imageToSwapBR.imgB1(src='blank.png')
+        select(onchange="$('#imageToSwapBR').attr('src', this.options[this.selectedIndex].value);")
+          option(value='', selected='') Select Right Height
+          option(value='Jersey/h.png') Bal
+          option(value='Jersey/h.png') Sanjum
+          option(value='Jersey/k.png') Paras
+        img#imageToSwapCM.imgB1(src='blank.png')
+        select(onchange="$('#imageToSwapCM').attr('src', this.options[this.selectedIndex].value);")
+          option(value='', selected='') Select Center Height
+          option(value='Jersey/h.png') Lakshman
+          option(value='Jersey/k.png') Dev
+          option(value='Jersey/o.png') Paarth
+          option(value='Jersey/t.png') Saraf
+      img.bhide(src='bhide.png')
+    script(type='text/javascript').
+      $("#captain")
+      .change(function() {
+      var str = "";
+      $( ".player option:selected" ).each(function() {
+      str = "<option value="">"+ $( this ).text() + "</option>";
+      $("#captain").append(str);
+      });
+      })
+      .trigger( "change" );

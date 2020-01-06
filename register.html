@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fantasy League</title>
+	<link rel="icon" type="image/png" href="logo.png">
+	<link rel="stylesheet" type="text/css" href="stylesheet.css">
+</head>
+
+<body>
+		<div id="block">
+			<div id="card">
+						<div id="container">
+								<h1 id="action"><span>Register</span></h1>
+								<p id="fail" style="display: none;">Authentication failed. Give it another shot!</p>
+									<form action="/action_page.php" id="form">
+									    <input type="text" name="username" placeholder="Name" id="name" onclick="demoUser()">
+
+										  <input type="text" name="username" placeholder="Email" id="email" onclick="demoUser()">
+
+										  <input type="text" name="username" placeholder="Username" id="username" onclick="demoUser()">
+										  <br>
+										  <input type="password" name="password" placeholder="Password" id="password" onclick="demoPsw()">
+										  <br>
+										  <input type="submit" value="Proceed" id="submit" onclick="authenticate();">
+									</form>
+								<span>Already a member? <a href="login.html">Sign in</a></span>
+						</div>
+			</div>
+		</div>
+
+	<script type="text/javascript">
+
+		function failed() {
+			document.querySelector('#username').style.display = 'none';
+			document.querySelector('#password').style.display = 'none';
+			document.querySelector('#action').innerHTML = 'Login Failed';
+			document.querySelector('#action').style.color = '#fc212f';
+			document.querySelector('#submit').value = 'Okay';
+			document.querySelector('#submit').style.color = '#ffffff';
+			document.querySelector('#submit').style.backgroundColor = 'fc212f';
+			document.querySelector('#fail').innerHTML = 'This account may be temporarily suspended because there have been multiple attempts to access it using invalid credentials.';
+			document.querySelector('#fail').style.display = 'block';
+			document.querySelector('#fail').style.color = 'white';
+			document.querySelector('#fail').style.fontSize = '1em';
+		}
+
+		</script>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+doctype html
+html
+  head
+    title Fantasy League
+    link(rel='icon', type='image/png', href='logo.png')
+    link(rel='stylesheet', type='text/css', href='stylesheet.css')
+  body
+    #block
+      #card
+        #container
+          h1#action
+            span Register
+          p#fail(style='display: none;') Authentication failed. Give it another shot!
+          form#form(action='/action_page.php')
+            input#name(type='text', name='username', placeholder='Name', onclick='demoUser()')
+            input#email(type='text', name='username', placeholder='Email', onclick='demoUser()')
+            input#username(type='text', name='username', placeholder='Username', onclick='demoUser()')
+            br
+            input#password(type='password', name='password', placeholder='Password', onclick='demoPsw()')
+            br
+            input#submit(type='submit', value='Proceed', onclick='authenticate();')
+          span
+            | Already a member? 
+            a(href='login.html') Sign in
+    script(type='text/javascript').
+      function failed() {
+      document.querySelector('#username').style.display = 'none';
+      document.querySelector('#password').style.display = 'none';
+      document.querySelector('#action').innerHTML = 'Login Failed';
+      document.querySelector('#action').style.color = '#fc212f';
+      document.querySelector('#submit').value = 'Okay';
+      document.querySelector('#submit').style.color = '#ffffff';
+      document.querySelector('#submit').style.backgroundColor = 'fc212f';
+      document.querySelector('#fail').innerHTML = 'This account may be temporarily suspended because there have been multiple attempts to access it using invalid credentials.';
+      document.querySelector('#fail').style.display = 'block';
+      document.querySelector('#fail').style.color = 'white';
+      document.querySelector('#fail').style.fontSize = '1em';
+      }

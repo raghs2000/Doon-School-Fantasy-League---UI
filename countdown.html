@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Doon Fantasy League</title>
+	<link rel="icon" type="image/png" href="logo.png">
+	<link rel="stylesheet" type="text/css" href="stylesheet.css">
+	<style>
+		p {
+		  text-align: center;
+		  font-size: 60px;
+		  color: white;
+		  margin-bottom: 10px;
+		}
+		#demo {
+		  margin-top: 250px;
+		  font-weight: 300;
+		}
+</style>
+</head>
+
+<body>
+	
+	<p id="demo"></p>
+	<p>#Let_the_games_begin</p>
+
+	<script>
+	var countDownDate = new Date("Nov 19, 2018 10:00:00").getTime();
+
+	var x = setInterval(function() {
+
+    var now = new Date().getTime();
+    
+    var distance = countDownDate - now;
+    
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+    document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+    + minutes + "m " + seconds + "s ";
+    
+    if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("demo").innerHTML = "EXPIRED";
+    }
+}, 1000);
+</script>
+
+</body>
+</html>

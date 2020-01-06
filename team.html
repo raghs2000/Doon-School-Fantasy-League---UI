@@ -1,0 +1,103 @@
+<html>
+<head>
+	<title>Doon Fantasy League</title>
+	<link rel="stylesheet" type="text/css" href="stylesheet.css">
+	<link rel="icon" type="image/png" href="logo.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+</head>
+<body>
+    <div class="titleHead">
+        <h1>MAKE YOUR TEAM</h1>
+    </div>
+
+    <div class="headTeam">
+        <p id="price">YOUR BUDGET</p>
+        <h1 id="displayPrice">50.0</h1>
+    </div>
+
+	<div id="court">
+
+        <img class="imgA1" src="court.png">
+        <div id="subs">
+            <img id="imageToSwapS1" class="imgB1" src="blank.png">
+            <select onchange="$('#imageToSwapS1').attr('src', this.options[this.selectedIndex].value);">
+                <option value="" selected>Select Substitute 1</option>
+                <option value="Jersey/h.png">Lakshman</option>
+                <option value="Jersey/k.png">Dev</option>
+                <option value="Jersey/o.png">Paarth</option>
+                <option value="Jersey/t.png">Saraf</option>
+            </select>
+            <img id="imageToSwapS2" class="imgB1" src="blank.png">
+            <select onchange="$('#imageToSwapS2').attr('src', this.options[this.selectedIndex].value);">
+                <option value="" selected>Select Substitute 2</option>
+                <option value="Jersey/h.png">Lakshman</option>
+                <option value="Jersey/k.png">Dev</option>
+                <option value="Jersey/o.png">Paarth</option>
+                <option value="Jersey/t.png">Saraf</option>
+            </select>
+            <img id="imageToSwapS3" class="imgB1" src="blank.png">
+            <select onchange="$('#imageToSwapS3').attr('src', this.options[this.selectedIndex].value);">
+                <option value="" selected>Select Substitute 3</option>
+                <option value="Jersey/h.png">Lakshman</option>
+                <option value="Jersey/k.png">Dev</option>
+                <option value="Jersey/o.png">Paarth</option>
+                <option value="Jersey/t.png">Saraf</option>
+            </select>
+        </div>
+
+        <div id="gates">
+            <img id="imageToSwapTL" class="imgB1" src="blank.png">
+            <select onchange="$('#imageToSwapTL').attr('src', this.options[this.selectedIndex].value);">
+                <option value="" selected>Select Left Gate</option>
+                <option value="Jersey/k.png">Naman</option>
+                <option value="Jersey/o.png">Raghav</option>
+                <option value="Jersey/h.png">Tarush</option>
+            </select>
+            <img id="imageToSwapTR" class="imgB1" src="blank.png">
+            <select onchange="$('#imageToSwapTR').attr('src', this.options[this.selectedIndex].value);">
+                <option value="" selected>Select Right Gate</option>
+                <option value="Jersey/k.png">Hamza</option>
+                <option value="Jersey/j.png">Aayush</option>
+                <option value="Jersey/o.png">Devansh</option>
+            </select>
+        </div>
+
+        <div id="heights">
+            <img id="imageToSwapBL" class="imgB1" src="blank.png">
+            <select onchange="$('#imageToSwapBL').attr('src', this.options[this.selectedIndex].value);">
+                <option value="" selected>Select Left Height</option>
+                <option value="Jersey/h.png">Sparsh</option>
+                <option value="Jersey/h.png">Bonda</option>
+                <option value="Jersey/k.png">Kushagra</option>
+            </select>
+            <img id="imageToSwapBR" class="imgB1" src="blank.png">
+            <select onchange="$('#imageToSwapBR').attr('src', this.options[this.selectedIndex].value);">
+                <option value="" selected>Select Right Height</option>
+                <option value="Jersey/h.png">Bal</option>
+                <option value="Jersey/h.png">Sanjum</option>
+                <option value="Jersey/k.png">Paras</option>
+            </select>
+            <img id="imageToSwapCM" class="imgB1" src="blank.png">
+            <select onchange="$('#imageToSwapCM').attr('src', this.options[this.selectedIndex].value);">
+                <option value="" selected>Select Center Height</option>
+                <option value="Jersey/h.png">Lakshman</option>
+                <option value="Jersey/k.png">Dev</option>
+                <option value="Jersey/o.png">Paarth</option>
+                <option value="Jersey/t.png">Saraf</option>
+            </select>
+        </div>
+
+        <img class="bhide" src="bhide.png">
+    </div>
+
+    <script type="text/javascript">
+
+    function change(var x) {
+        var price = document.getElementById('displayPrice').text;
+        price = price -x;
+        document.getElementById('displayPrice').text = price;
+    }
+
+    </script>
+</body>
+</html>

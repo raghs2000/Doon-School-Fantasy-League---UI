@@ -1,0 +1,105 @@
+<!DOCTYPE>
+<html>
+<head>
+	<title>Fantasy League</title>
+	<link rel="stylesheet" type="text/css" href="stylesheet.css">
+	<link rel="icon" type="image/png" href="logo.png">
+</head>
+
+<body>
+		<div id="sidenav" class="sidenav">
+		<h1>Account Settings</h1>
+		  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+		  <a href="#" onclick="showAbout()">About</a>
+		  <a href="#" onclick="showInfo()">General Information</a>
+		  <a href="#" onclick="showPsw()">Change Password</a>
+		  <a href="#" onclick="showRules()">Rules</a>
+		  <a href="#" onclick="showFeedback()">Contact</a>
+		</div>
+
+		<div id="main">
+		<span style="font-size:1em;font-weight: 700;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+		  <h2 style="margin-bottom: 5px;">Settings</h2>
+			 <form id="psw">
+				<input type="password" name="password" placeholder="Old Password" id="password" onclick="demoUser()">
+				<br>
+				<input type="password" name="password" placeholder="New Password" id="password" onclick="demoPsw()">
+				<br>
+				<input type="submit" value="Update" id="submit" onclick="authenticate();">
+			 </form>
+
+			 <form id="info">
+				<input type="text" name="username" placeholder="Username" id="username" onclick="demoUser()">
+				<br>
+				<input type="text" name="email" placeholder="Email" id="email" onclick="demoPsw()">
+				<br>
+				<input type="submit" value="Update" id="submit" onclick="authenticate();">
+			 </form>
+
+			 <p id="about">
+			 	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam varius nisl at nunc laoreet consectetur. Maecenas vitae blandit diam, non rhoncus purus. Etiam consectetur sem et ultricies accumsan. In et nisi purus. Vestibulum est quam, aliquam vel pulvinar eget, dictum nec nunc. In vehicula odio libero, luctus luctus leo lacinia quis. Proin efficitur mattis eros. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Ut congue orci nec purus pulvinar, ac feugiat felis tincidunt. Cras non ipsum non lorem varius varius nec in justo.
+			 </p>
+
+			 <p id="rules">
+			 	In ultricies dolor quis nibh tincidunt scelerisque. Praesent vehicula libero nec ante semper condimentum. In molestie molestie dui, id iaculis neque fermentum ut. Cras accumsan egestas convallis. Cras porta neque quis mollis fermentum. Vivamus sit amet urna at leo sagittis consequat nec non lorem. Nam id volutpat ligula. In interdum malesuada velit ac venenatis. Quisque vehicula dictum lacus, id sagittis elit accumsan aliquet. Duis volutpat, nunc eu volutpat cursus, lectus metus vestibulum eros, a molestie orci diam in ante. Nunc non rutrum eros. Praesent volutpat lorem massa, eget laoreet velit viverra eget. Aliquam massa neque, suscipit eget ligula ac, luctus molestie nulla. Nulla venenatis pellentesque porta. In elit tortor, porttitor ut scelerisque non, finibus eu libero. Ut bibendum diam quis nisi molestie tempor.
+			 </p>
+
+			 <form id="feedback">
+			 	<textarea rows="10"></textarea>
+			 	<input type="submit" name="submit" id="submit" value="Submit">
+			 </form>
+		</div>
+
+		<script>
+			function openNav() {
+			    document.getElementById("sidenav").style.width = "225px";
+			    document.getElementById("main").style.marginLeft = "250px";
+			    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+			}
+
+			function closeNav() {
+			    document.getElementById("sidenav").style.width = "0";
+			    document.getElementById("main").style.marginLeft= "0";
+			    document.body.style.backgroundColor = "white";
+			}
+
+			function showInfo() {
+				document.getElementById("feedback").style.display = "none";
+				document.getElementById("psw").style.display = "none";
+				document.getElementById("about").style.display = "none";
+				document.getElementById("info").style.display = "block";
+			}
+
+			function showPsw() {
+				document.getElementById("feedback").style.display = "none";
+				document.getElementById("info").style.display = "none";
+				document.getElementById("about").style.display = "none";
+				document.getElementById("psw").style.display = "block";
+			}
+
+
+			function showAbout() {
+				document.getElementById("feedback").style.display = "none";
+				document.getElementById("psw").style.display = "none";
+				document.getElementById("info").style.display = "none";
+				document.getElementById("about").style.display = "block";
+			}
+
+			function showRules() {
+				document.getElementById("feedback").style.display = "none";
+				document.getElementById("psw").style.display = "none";
+				document.getElementById("info").style.display = "none";
+				document.getElementById("about").style.display = "none";
+				document.getElementById("rules").style.display = "block";
+			}
+
+			function showFeedback() {
+				document.getElementById("psw").style.display = "none";
+				document.getElementById("info").style.display = "none";
+				document.getElementById("about").style.display = "none";
+				document.getElementById("rules").style.display = "none";
+				document.getElementById("feedback").style.display = "block";
+			}
+		</script>
+</body>
+</html>
